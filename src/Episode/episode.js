@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './episode.css';
 
-const Episode = (props) => {
-  return (
-    <div className="episode">
-      <p>{props.title}</p>
-    </div>
-  )
+class Episode extends Component {
+  render() {
+    const style = {
+      backgroundImage: `url('${this.props.image}')`
+    };
+    const videoUrl = this.props.url
+    return (
+      <div className="card-episode">
+        <iframe src={videoUrl} controls></iframe>
+        <p className="card-text">{this.props.title}</p>
+      </div>
+    )
+  }
 }
 
 export default Episode;
