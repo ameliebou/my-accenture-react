@@ -14,7 +14,7 @@ class App extends Component {
       {
         image: "www.accenture.com/t00010101T000000Z__w__/de-de/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Content_Images/21/Accenture-ASG-Esports-Maestra-400x225-new.jpg",
         title: "Marlies „Maestra“ ist das österreichische LoL Powerhaus mit Master in Psychologie.",
-        url: "https://www.youtube-nocookie.com/embed/h4Wn7wY03k?rel=0&autoplay=1&enablejsapi=1"
+        url: "https://www.youtube-nocookie.com/embed/Kh4Wn7wY03k?rel=0&autoplay=1&enablejsapi=1"
       },
       {
         image: "www.accenture.com/t00010101T000000Z__w__/de-de/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Content_Images/20/Accenture-Megabit-Erhano-Content.jpg",
@@ -26,17 +26,27 @@ class App extends Component {
         title: "Für „Jenax“ kam das Kompetitive beim LoL Zocken ganz natürlich.",
         url: "https://www.youtube-nocookie.com/embed/z5RQMsrvcjo?rel=0&autoplay=1&enablejsapi=1"
       }
-    ]
+    ],
+    showEpisodes: false
+  }
+
+  toggleEpisodes = () => {
+    const doesShow = this.state.showEpisodes;
+    this.setState({showEpisodes: !doesShow});
   }
 
   render() {
-    const episodes = (
-      <div className="grid">
-        {this.state.episodes.map((episode) => {
-          return <Episode key={episode.title} title={episode.title} image={episode.image} url={episode.url}></Episode>
-        })}
-      </div>
-    )
+    let episodes = null;
+
+    if (this.state.showEpisodes) {
+      episodes = (
+        <div className="grid">
+          {this.state.episodes.map((episode) => {
+            return <Episode key={episode.title} title={episode.title} image={episode.image} url={episode.url}></Episode>
+          })}
+        </div>
+      )
+    }
 
 
     return (
@@ -53,7 +63,7 @@ class App extends Component {
           </div>
         </header>
         <div className="container">
-          <div className="episode-title">
+          <div className="episode-title" onClick={this.toggleEpisodes}>
             <h2>Accenture Profiles</h2>
             <p>With the help of Moritz from the Rocket Beans, Accenture had a chat with a few pro gamers. They are sharing some very interesting insights about their career.</p>
           </div>
