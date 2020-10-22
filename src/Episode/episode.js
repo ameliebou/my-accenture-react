@@ -13,21 +13,28 @@ class Episode extends Component {
 
   render() {
     let video = null;
+    const style = {
+      backgroundImage: `url(${process.env.PUBLIC_URL}${this.props.image})`
+    };
+    let card = (
+      <div className="card-episode" style={style} onClick={this.playVideo}>
+        <p className="card-text">{this.props.title}</p>
+      </div>
+    )
 
     if (this.state.showVideo) {
       const videoUrl = this.props.url
       video = (
         <iframe src={videoUrl} controls></iframe>
-      )
+      );
+      card = null;
+    } else {
+      card
     }
 
-    const style = {
-      backgroundImage: `url('${this.props.image}')`
-    };
     return (
-      <div className="card-episode" style={style} onClick={this.playVideo}>
-
-        <p className="card-text">{this.props.title}</p>
+      <div>
+        {card}
         {video}
       </div>
     )
