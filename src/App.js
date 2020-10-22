@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Episode from './Episode/episode';
 import Badge from './Badge/badge';
+import Footer from './Footer/footer';
 import './App.css';
 
 class App extends Component {
@@ -30,10 +31,21 @@ class App extends Component {
     ],
     showEpisodes: false,
     badges: [
-      {title: "Mission", description:"Accenture offers Strategy, Consulting, as well as Interactive, Technology and Operations services"},
-      {title: "Numbers", description:"505K employees - 7K patents - 200 cities - 51 countries"},
-      {title: "Impact", description:"Aim at changing to a low-carbon economy, Supports more than 3 million people in their career"},
-      {title: "Profiles", description:"With the help of Moritz from the Rocket Beans, Accenture had a chat with a few pro gamers. They are sharing some very interesting insights about their career."}
+      {
+        title: "Mission",
+        description:"Accenture offers Strategy, Consulting, as well as Interactive, Technology and Operations services",
+        picture: "https://www.accenture.com/_acnmedia/Thought-Leadership-Assets/Images/mainpage/accenture-eye-bg"
+      },
+      {
+        title: "Numbers",
+        description:"505K employees - 7K patents - 200 cities - 51 countries",
+        picture: "https://www.accenture.com/_acnmedia/Thought-Leadership-Assets/Images/aboutpage/Accenture-bg-1"
+      },
+      {
+        title: "Impact",
+        description:"Aim at changing to a low-carbon economy, Supports more than 3 million people in their career",
+        picture: "https://www.accenture.com/_acnmedia/Thought-Leadership-Assets/Images/aboutpage/accenture-bg-2"
+      }
     ]
   }
 
@@ -42,9 +54,9 @@ class App extends Component {
     this.setState({showEpisodes: !doesShow});
   };
 
-
   render() {
     let episodes = null;
+
 
     if (this.state.showEpisodes) {
       episodes = (
@@ -59,21 +71,20 @@ class App extends Component {
     const badges = (
       <div className="badges">
         {this.state.badges.map((badge) => {
-          if (badge.title === "Profiles") {
-            return (
-              <div className="badge-row" onClick={this.toggleEpisodes}>
-                <Badge title={badge.title}></Badge>
-                <p>{badge.description}</p>
-              </div>
-            )
-          } else {
-            return (
-              <div className="badge-row">
-                <Badge title={badge.title}></Badge>
-                <p>{badge.description}</p>
-              </div>
-            )
+          const style = {
+            backgroundImage: `url('${badge.picture}')`
           }
+
+          return (
+            <div>
+              <Badge key={badge.title} title={badge.title} picture={badge.picture} onClick={this.toggleDescription}>></Badge>
+
+              <div className="badge-description">
+                <p>{badge.description}</p>
+              </div>
+            </div>
+          )
+
         })}
       </div>
     )
@@ -81,7 +92,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="banner">
+        <header className="banner" id="banner">
           <div className="App-header">
             <div className="App-title">
               <img src={logo} className="App-logo" alt="logo" />
@@ -89,15 +100,19 @@ class App extends Component {
             </div>
             <h2 className="App-subline">Let there be change</h2>
             <p className="header-caret">
-              <i className="fas fa-angle-down"></i>
+              <a href="#container"><i className="fas fa-angle-down"></i></a>
             </p>
           </div>
         </header>
-        <div className="container">
+        <div className="container" id="container">
           {badges}
-
+          <div onClick={this.toggleEpisodes}>
+            <h2>Accenture Profiles</h2>
+            <p>With the help of Moritz from the Rocket Beans, Accenture had a chat with a few pro gamers. They are sharing some very interesting insights about their career.</p>
+          </div>
           {episodes}
         </div>
+        <Footer/>
       </div>
     );
   }
