@@ -18,7 +18,7 @@ class Episode extends Component {
     };
     let card = (
       <div className="card-episode" style={style} onClick={this.playVideo}>
-        <p className="card-text">{this.props.title}</p>
+        <p className="card-text"></p>
       </div>
     )
 

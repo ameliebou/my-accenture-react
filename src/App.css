@@ -71,7 +71,6 @@ h1 {
 }
 
 .profiles {
-  cursor: pointer;
   width: 70vh;
   margin: 200px auto;
   position: relative;
@@ -86,6 +85,11 @@ h1 {
 .profiles p {
   font-size: 20px;
 }
+.profiles-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 #video {
   overflow: hidden;
@@ -94,4 +98,14 @@ h1 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.fa-sync-alt {
+  cursor: pointer;
+  font-size: 50px;
+  transition: all 1s;
+}
+
+.fa-sync-alt:hover {
+  transform: rotate(180deg);
 }
