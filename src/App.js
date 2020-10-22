@@ -56,8 +56,10 @@ class App extends Component {
 
   render() {
     let episodes = null;
+    let caretStyle = null;
 
     if (this.state.showEpisodes) {
+      caretStyle = {transform: "rotate(180deg)"}
       episodes = (
         <div className="grid">
           {this.state.episodes.map((episode) => {
@@ -101,7 +103,7 @@ class App extends Component {
           <div className="profiles-image"></div>
             <div className="profiles-title">
               <h2>Accenture Profiles</h2>
-              <i class="fas fa-angle-down profiles-caret" onClick={this.toggleEpisodes}></i>
+              <i class="fas fa-angle-down profiles-caret" style={caretStyle} onClick={this.toggleEpisodes}></i>
             </div>
             <p>With the help of Moritz from the Rocket Beans, Accenture had a chat with a few pro gamers. They are sharing some very interesting insights about their career.</p>
           </div>
