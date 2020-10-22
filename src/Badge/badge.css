@@ -1,0 +1,27 @@
+.badge {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #a100ff;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.badge h2 {
+  font-weight: lighter;
+}
+
+.badge-row {
+  display: flex;
+  align-items: center;
+}
+
+.badge-row p {
+  width: calc(90vw - 140px);
+  padding-left: 20px;
+  font-size: 20px;
+}

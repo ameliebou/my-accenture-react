@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Episode from './Episode/episode';
+import Badge from './Badge/badge';
 import './App.css';
 
 class App extends Component {
@@ -27,13 +28,20 @@ class App extends Component {
         url: "https://www.youtube-nocookie.com/embed/z5RQMsrvcjo?rel=0&autoplay=1&enablejsapi=1"
       }
     ],
-    showEpisodes: false
+    showEpisodes: false,
+    badges: [
+      {title: "Mission", description:"Accenture offers Strategy, Consulting, as well as Interactive, Technology and Operations services"},
+      {title: "Numbers", description:"505K employees - 7K patents - 200 cities - 51 countries"},
+      {title: "Impact", description:"Aim at changing to a low-carbon economy, Supports more than 3 million people in their career"},
+      {title: "Profiles", description:"With the help of Moritz from the Rocket Beans, Accenture had a chat with a few pro gamers. They are sharing some very interesting insights about their career."}
+    ]
   }
 
   toggleEpisodes = () => {
     const doesShow = this.state.showEpisodes;
     this.setState({showEpisodes: !doesShow});
-  }
+  };
+
 
   render() {
     let episodes = null;
@@ -45,8 +53,30 @@ class App extends Component {
             return <Episode key={episode.title} title={episode.title} image={episode.image} url={episode.url}></Episode>
           })}
         </div>
-      )
-    }
+      );
+    };
+
+    const badges = (
+      <div className="badges">
+        {this.state.badges.map((badge) => {
+          if (badge.title === "Profiles") {
+            return (
+              <div className="badge-row" onClick={this.toggleEpisodes}>
+                <Badge title={badge.title}></Badge>
+                <p>{badge.description}</p>
+              </div>
+            )
+          } else {
+            return (
+              <div className="badge-row">
+                <Badge title={badge.title}></Badge>
+                <p>{badge.description}</p>
+              </div>
+            )
+          }
+        })}
+      </div>
+    )
 
 
     return (
@@ -57,16 +87,15 @@ class App extends Component {
               <img src={logo} className="App-logo" alt="logo" />
               <h1>MY ACCENTURE</h1>
             </div>
+            <h2 className="App-subline">Let there be change</h2>
             <p className="header-caret">
               <i className="fas fa-angle-down"></i>
             </p>
           </div>
         </header>
         <div className="container">
-          <div className="episode-title" onClick={this.toggleEpisodes}>
-            <h2>Accenture Profiles</h2>
-            <p>With the help of Moritz from the Rocket Beans, Accenture had a chat with a few pro gamers. They are sharing some very interesting insights about their career.</p>
-          </div>
+          {badges}
+
           {episodes}
         </div>
       </div>
