@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(240,240,240);
+}
+
 .App {
   font-family: 'Rubik';
 }
@@ -21,7 +26,6 @@
 
 .App-header {
   margin: auto 10px;
-  /*position: relative;*/
 }
 
 h1 {
@@ -66,19 +70,28 @@ h1 {
   margin: auto;
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: rgb(240,240,240);
+.profiles {
+  cursor: pointer;
+  width: 70vh;
+  margin: 200px auto;
+  position: relative;
+  color: white;
 }
 
-.grid {
-  margin: auto;
-  width: 80vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
-  transition: all linear 1s;
+.profiles h2 {
+  font-size: 45px;
+  font-weight: normal
 }
 
+.profiles p {
+  font-size: 20px;
+}
 
+#video {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

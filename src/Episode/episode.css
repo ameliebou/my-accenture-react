@@ -14,3 +14,13 @@
   margin: auto 0;
   padding: 10px;
 }
+
+.grid {
+  margin: auto;
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  transition: all linear 1s;
+}
