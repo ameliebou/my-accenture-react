@@ -72,9 +72,6 @@ class App extends Component {
     const badges = (
       <div className="badges">
         {this.state.badges.map((badge) => {
-          const style = {
-            backgroundImage: `url('${badge.picture}')`
-          }
           return (
             <Badge key={badge.title} title={badge.title} picture={badge.picture} description={badge.description}></Badge>
           )
