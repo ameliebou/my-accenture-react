@@ -3,19 +3,36 @@ import './badge.css';
 
 class Badge extends Component {
 
+  state = { showDescription: false };
+
+  showDescription = () => {
+    this.setState({showDescription: true});
+  };
+
+  hideDescription = () => {
+    this.setState({showDescription: false});
+  };
+
   render() {
 
     let description = null;
 
-    const style = {
-      backgroundImage: `url('${this.props.picture}')`
-    };
+    if (this.state.showDescription) {
+      description = (
+        <div className="badge-description">
+          <p>{this.props.description}</p>
+        </div>
+      )
+    }
+
+    const style = { backgroundImage: `url('${this.props.picture}')` };
 
     return (
       <div>
-        <div className="badge" style={style}>
+        <div className="badge" style={style} onMouseOver={this.showDescription} onMouseOut={this.hideDescription}>
           <h2>{this.props.title}</h2>
         </div>
+        {description}
       </div>
     )
   }

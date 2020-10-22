@@ -31,10 +31,17 @@
   font-size: 20px;
 }
 
-.badges {
-  text-align: center;
+
+.badge-description {
+  width: 300px;
 }
 
 .badge-description p {
   font-size: 20px;
+}
+
+.badges {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
 }

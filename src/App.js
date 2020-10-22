@@ -9,22 +9,22 @@ class App extends Component {
   state = {
     episodes: [
       {
-        image: "https://www.accenture.com/t00010101T000000Z__w__/de-de/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Content_Images/20/Accenture-ASG-Esports-Destany-400x225.png",
+        image: "destany.png",
         title: "Zuhause beim besten Smasher der Schweiz, Destan „Destany“.",
         url: "https://www.youtube-nocookie.com/embed/LpZqsICdSaM?rel=0&autoplay=1&enablejsapi=1"
       },
       {
-        image: "www.accenture.com/t00010101T000000Z__w__/de-de/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Content_Images/21/Accenture-ASG-Esports-Maestra-400x225-new.jpg",
+        image: "maestra.jpg",
         title: "Marlies „Maestra“ ist das österreichische LoL Powerhaus mit Master in Psychologie.",
         url: "https://www.youtube-nocookie.com/embed/Kh4Wn7wY03k?rel=0&autoplay=1&enablejsapi=1"
       },
       {
-        image: "www.accenture.com/t00010101T000000Z__w__/de-de/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Content_Images/20/Accenture-Megabit-Erhano-Content.jpg",
+        image: "megabit_erhano.jpg",
         title: "Echtes Fussballwissen darf bei Michael “MegaBit” und Erhan “Dr. Erhano” nicht fehlen.",
         url: "https://www.youtube-nocookie.com/embed/xAuZ2PVOXv4?rel=0&autoplay=1&enablejsapi=1"
       },
       {
-        image: "www.accenture.com/t00010101T000000Z__w__/de-de/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Content_Images/20/Accenture-jenax-thumbnail.jpg",
+        image: "jenax.jpg",
         title: "Für „Jenax“ kam das Kompetitive beim LoL Zocken ganz natürlich.",
         url: "https://www.youtube-nocookie.com/embed/z5RQMsrvcjo?rel=0&autoplay=1&enablejsapi=1"
       }
@@ -74,17 +74,9 @@ class App extends Component {
           const style = {
             backgroundImage: `url('${badge.picture}')`
           }
-
           return (
-            <div>
-              <Badge key={badge.title} title={badge.title} picture={badge.picture} onClick={this.toggleDescription}>></Badge>
-
-              <div className="badge-description">
-                <p>{badge.description}</p>
-              </div>
-            </div>
+            <Badge key={badge.title} title={badge.title} picture={badge.picture} description={badge.description}></Badge>
           )
-
         })}
       </div>
     )
