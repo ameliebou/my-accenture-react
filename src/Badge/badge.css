@@ -1,14 +1,19 @@
 .badge {
-  height: 100px;
-  width: 100px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
-  background-color: #a100ff;
+  /*background-color: #a100ff;*/
   color: white;
-  font-size: 14px;
+  font-size: 30px;
+  text-shadow: 0px 0px 5px rgb(200,200,200);
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .badge h2 {
@@ -23,5 +28,13 @@
 .badge-row p {
   width: calc(90vw - 140px);
   padding-left: 20px;
+  font-size: 20px;
+}
+
+.badges {
+  text-align: center;
+}
+
+.badge-description p {
   font-size: 20px;
 }
