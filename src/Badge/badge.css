@@ -31,13 +31,26 @@
   font-size: 20px;
 }
 
+.big-badge {
+  position: relative;
+  margin: 120px 0;
+}
 
 .badge-description {
+  position: absolute;
   width: 300px;
+  /*border: 1px solid #6400a3;*/
+  border-radius: 5px;
+  /*background-color: #6400a3;*/
+  margin-top: 5px;
+  padding: 5px 10px;
 }
 
 .badge-description p {
+  margin: 0;
   font-size: 20px;
+  color: #6400a3;
+  font-weight: lighter;
 }
 
 .badges {

@@ -28,7 +28,7 @@ class Badge extends Component {
     const style = { backgroundImage: `url('${this.props.picture}')` };
 
     return (
-      <div>
+      <div className="big-badge">
         <div className="badge" style={style} onMouseOver={this.showDescription} onMouseOut={this.hideDescription}>
           <h2>{this.props.title}</h2>
         </div>
