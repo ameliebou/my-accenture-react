@@ -25,3 +25,21 @@
   align-content: flex-start;
   transition: all linear 1s;
 }
+
+.iframe-episode {
+  /*margin: 10px;*/
+}
+
+.video-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.video-arrow {
+  font-size: 20px;
+  cursor: pointer;
+}

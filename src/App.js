@@ -9,14 +9,9 @@ class App extends Component {
   state = {
     episodes: [
       {
-        image: "destany.png",
-        title: "Zuhause beim besten Smasher der Schweiz, Destan „Destany“.",
-        url: "https://www.youtube-nocookie.com/embed/LpZqsICdSaM?rel=0&autoplay=1&enablejsapi=1"
-      },
-      {
-        image: "maestra.jpg",
-        title: "Marlies „Maestra“ ist das österreichische LoL Powerhaus mit Master in Psychologie.",
-        url: "https://www.youtube-nocookie.com/embed/Kh4Wn7wY03k?rel=0&autoplay=1&enablejsapi=1"
+        image: "jenax.jpg",
+        title: "Für „Jenax“ kam das Kompetitive beim LoL Zocken ganz natürlich.",
+        url: "https://www.youtube-nocookie.com/embed/z5RQMsrvcjo?rel=0&autoplay=1&enablejsapi=1"
       },
       {
         image: "megabit_erhano.jpg",
@@ -24,9 +19,14 @@ class App extends Component {
         url: "https://www.youtube-nocookie.com/embed/xAuZ2PVOXv4?rel=0&autoplay=1&enablejsapi=1"
       },
       {
-        image: "jenax.jpg",
-        title: "Für „Jenax“ kam das Kompetitive beim LoL Zocken ganz natürlich.",
-        url: "https://www.youtube-nocookie.com/embed/z5RQMsrvcjo?rel=0&autoplay=1&enablejsapi=1"
+        image: "maestra.jpg",
+        title: "Marlies „Maestra“ ist das österreichische LoL Powerhaus mit Master in Psychologie.",
+        url: "https://www.youtube-nocookie.com/embed/Kh4Wn7wY03k?rel=0&autoplay=1&enablejsapi=1"
+      },
+      {
+        image: "destany.png",
+        title: "Zuhause beim besten Smasher der Schweiz, Destan „Destany“.",
+        url: "https://www.youtube-nocookie.com/embed/LpZqsICdSaM?rel=0&autoplay=1&enablejsapi=1"
       }
     ],
     showEpisodes: false,

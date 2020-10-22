@@ -25,7 +25,10 @@ class Episode extends Component {
     if (this.state.showVideo) {
       const videoUrl = this.props.url
       video = (
-        <iframe src={videoUrl} controls allowfullscreen="true"></iframe>
+        <div className="video-container">
+          <iframe src={videoUrl} controls allowfullscreen="true" class="iframe-episode"></iframe>
+          <i class="fas fa-undo video-arrow" onClick={this.playVideo}></i>
+        </div>
       );
       card = null;
     } else {
