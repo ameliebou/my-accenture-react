@@ -98,10 +98,10 @@ class App extends Component {
         <div className="container" id="container">
           {badges}
           <div className="profiles">
-            <video id="video" src="https://www.accenture.com/t20201011T094151Z__w__/gb-en/_acnmedia/Accenture/Redesign-Assets/DotCom/Video/Global/1/Accenture-Service-Strategy-and-consulting-1280x480-V2_2.mp4" height="444px" loop playsinline autoPlay></video>
+          <div className="profiles-image"></div>
             <div className="profiles-title">
               <h2>Accenture Profiles</h2>
-              <i class="fas fa-sync-alt" onClick={this.toggleEpisodes}></i>
+              <i class="fas fa-angle-down profiles-caret" onClick={this.toggleEpisodes}></i>
             </div>
             <p>With the help of Moritz from the Rocket Beans, Accenture had a chat with a few pro gamers. They are sharing some very interesting insights about their career.</p>
           </div>

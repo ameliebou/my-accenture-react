@@ -46,7 +46,7 @@ h1 {
 .header-caret {
   font-size: 60px;
   animation-name: bounce;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -57,11 +57,11 @@ h1 {
 
 @keyframes bounce {
   from {
-    margin-top: 20%;
+    margin-top: 4%;
   }
 
   to {
-    margin-top: 25%;
+    margin-top: 5%;
   }
 }
 
@@ -75,6 +75,19 @@ h1 {
   margin: 200px auto;
   position: relative;
   color: white;
+}
+
+.profiles-image {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("https://www.accenture.com/t00010101T000000Z__w__/gb-en/_acnmedia/Accenture/Redesign-Assets/DotCom/Images/Global/General/63/Accenture-A-Guide-To-Thrive-300x180.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 400px;
 }
 
 .profiles h2 {
@@ -100,12 +113,8 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-.fa-sync-alt {
+.profiles-caret {
   cursor: pointer;
   font-size: 50px;
   transition: all 1s;
-}
-
-.fa-sync-alt:hover {
-  transform: rotate(180deg);
 }
