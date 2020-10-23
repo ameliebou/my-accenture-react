@@ -18,3 +18,9 @@
 #scroll-up {
   margin-left: 30px;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 20px;
+  }
+}
