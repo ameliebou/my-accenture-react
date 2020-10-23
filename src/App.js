@@ -96,16 +96,17 @@ class App extends Component {
         </header>
         <div className="container" id="container">
           {badges}
+        </div>
           <div className="profiles">
-          <div className="profiles-image"></div>
-            <div className="profiles-title">
-              <h2>Accenture Profiles</h2>
-              <i class="fas fa-angle-down profiles-caret" style={caretStyle} onClick={this.toggleEpisodes}></i>
+            <div className="profiles-text">
+              <div className="profiles-title">
+                <h2>Accenture Profiles</h2>
+                <i class="fas fa-angle-down profiles-caret" style={caretStyle} onClick={this.toggleEpisodes}></i>
+              </div>
+              <p>Accenture cares a lot about helping people with their career. Which is why they are offering a series of interviews with some German pro gamers.</p>
             </div>
-            <p>Accenture cares a lot about helping people with their career. Which is why they are offering a series of interviews with some German pro gamers.</p>
           </div>
           {episodes}
-        </div>
         <Footer/>
       </div>
     );
