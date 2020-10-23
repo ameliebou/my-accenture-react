@@ -14,6 +14,7 @@
   background-position: center;
   margin: auto;
   margin-top: 50px;
+  cursor: pointer;
 }
 
 .badge h2 {
@@ -38,6 +39,8 @@
 
 .badge-description {
   position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   width: 300px;
   border-radius: 5px;
   margin-top: 20px;
