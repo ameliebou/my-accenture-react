@@ -58,6 +58,7 @@ class App extends Component {
     let episodes = null;
     let caretStyle = null;
 
+
     if (this.state.showEpisodes) {
       caretStyle = {transform: "rotate(180deg)"}
       episodes = (
