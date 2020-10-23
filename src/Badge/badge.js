@@ -5,6 +5,11 @@ class Badge extends Component {
 
   state = { showDescription: false };
 
+  toggleDescription = () => {
+    const doesShow = this.state.showDescription;
+    this.setState({showDescription: !doesShow});
+  }
+
   showDescription = () => {
     this.setState({showDescription: true});
   };
@@ -29,7 +34,7 @@ class Badge extends Component {
 
     return (
       <div className="big-badge">
-        <div className="badge" style={style} onMouseOver={this.showDescription} onMouseOut={this.hideDescription}>
+        <div className="badge" style={style} onClick={this.toggleDescription} onMouseOver={this.showDescription} onMouseOut={this.hideDescription}>
           <h2>{this.props.title}</h2>
         </div>
         {description}
