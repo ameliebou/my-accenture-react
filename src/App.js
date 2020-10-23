@@ -102,7 +102,7 @@ class App extends Component {
               <h2>Accenture Profiles</h2>
               <i class="fas fa-angle-down profiles-caret" style={caretStyle} onClick={this.toggleEpisodes}></i>
             </div>
-            <p>With the help of Moritz from the Rocket Beans, Accenture had a chat with a few pro gamers. They are sharing some very interesting insights about their career.</p>
+            <p>Accenture cares a lot about helping people with their career. Which is why they are offering a series of interviews with some German pro gamers.</p>
           </div>
           {episodes}
         </div>
