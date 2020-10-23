@@ -14,7 +14,6 @@
   background-position: center;
   margin: auto;
   margin-top: 50px;
-  cursor: pointer;
 }
 
 .badge h2 {
@@ -58,4 +57,10 @@
   text-align: center;
   display: flex;
   justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .badge {
+    cursor: pointer;
+  }
 }
